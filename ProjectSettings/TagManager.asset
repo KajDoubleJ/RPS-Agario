@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Food
+  - PlayerTag
+  - Enemy
+  - EnemyTextTag
   layers:
   - Default
   - TransparentFX
@@ -41,4 +44,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Sphere
+    uniqueID: 1472885797
+    locked: 0
+  - name: RPS
+    uniqueID: 2351022429
     locked: 0

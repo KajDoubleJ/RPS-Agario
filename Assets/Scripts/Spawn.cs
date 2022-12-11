@@ -7,12 +7,18 @@ public class Spawn : MonoBehaviour
     public GameObject Food;
     public float Speed;
 
+    public float mapWidth;
+    public float mapHeight;
+
+    //prevent to spawn food a little bit out of the map
+    private float fix = 0.3f;
+
     void Start()
     {
         for(int i = 0; i < 1000; i++)
         {
-            float x = Random.Range(-52f, 52f);
-            float y = Random.Range(-40f, 40f);
+            float x = Random.Range(-1 * mapWidth / 2 + fix, mapWidth / 2 - fix);
+            float y = Random.Range(-1 * mapHeight / 2 + fix, mapHeight / 2 - fix);
 
             Vector3 Target = new Vector3(x, y, 0);
             Target.z = 0;
@@ -26,10 +32,14 @@ public class Spawn : MonoBehaviour
 
     void Generate()
     {
-        int x = Random.Range(0, Camera.main.pixelWidth);
-        int y = Random.Range(0, Camera.main.pixelHeight);
+        //int x = Random.Range(0, Camera.main.pixelWidth);
+        //int y = Random.Range(0, Camera.main.pixelHeight);
 
-        Vector3 Target = Camera.main.ScreenToWorldPoint(new Vector3(x, y, 0));
+        float x = Random.Range(-1 * mapWidth / 2 + fix, mapWidth / 2 - fix);
+        float y = Random.Range(-1 * mapHeight / 2 + fix, mapHeight / 2 - fix);
+
+        //Vector3 Target = Camera.main.ScreenToWorldPoint(new Vector3(x, y, 0));
+        Vector3 Target = new Vector3(x, y, 0);
         Target.z = 0;
 
         Instantiate(Food, Target, Quaternion.identity);
