@@ -5,6 +5,7 @@ using UnityEngine;
 public class RPSImageChange : MonoBehaviour
 {
     public GameObject Image;
+
     void Start()
     {
         if (GetComponent<RPSType>().Type == Type.Rock)

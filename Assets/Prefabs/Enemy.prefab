@@ -250,6 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: {fileID: 619747941784422321}
   Type: 0
+  immortality: 0
 --- !u!114 &619747941730451676
 MonoBehaviour:
   m_ObjectHideFlags: 0

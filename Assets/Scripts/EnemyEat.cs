@@ -8,7 +8,6 @@ public class EnemyEat : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-
         if (other.gameObject.tag == "Food")
         {
             transform.localScale += new Vector3(Increase, Increase, Increase);
